@@ -9,8 +9,9 @@ import static spark.Spark.secure;
 public class Appsegura {
 
     public static void main(String[] args){
+        
         port(5000);
-        secure("keystores/ecikeypair.p12", "12345678", null, null);
+        secure("keystores/ecikeystore.p12", "12345678", null, null);
         get("/hello", (req, res) -> "Hello World");
     }
 }
